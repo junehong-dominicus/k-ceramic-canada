@@ -33,11 +33,16 @@
   .nav nav{display:flex;gap:26px;align-items:center}
   .nav nav a{text-decoration:none;font-size:.92rem;color:var(--soft)}
   .nav nav a:hover{color:var(--ink)}
-  .btn{display:inline-block;background:var(--clay);color:#fff;text-decoration:none;padding:.65rem 1.25rem;border-radius:999px;font-size:.92rem;font-weight:500;transition:background .2s}
-  .btn:hover{background:var(--clay-dark)}
-  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
-  .btn.ghost:hover{background:var(--ink);color:#fff}
-  .nav .btn{padding:.5rem 1.05rem}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,#c85a33,var(--clay) 55%,var(--clay-dark));color:#fff;text-decoration:none;padding:.7rem 1.4rem;border-radius:999px;font-size:.93rem;font-weight:600;letter-spacing:.01em;box-shadow:0 6px 18px rgba(148,67,31,.35),inset 0 1px 0 rgba(255,255,255,.25);transition:transform .18s,box-shadow .18s,filter .18s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(148,67,31,.42),inset 0 1px 0 rgba(255,255,255,.25);filter:brightness(1.05)}
+  .btn:active{transform:translateY(0)}
+  .btn svg{width:16px;height:16px;flex:none}
+  .btn.insta{background:linear-gradient(45deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);box-shadow:0 6px 18px rgba(204,35,102,.38),inset 0 1px 0 rgba(255,255,255,.3)}
+  .btn.insta:hover{box-shadow:0 12px 26px rgba(204,35,102,.45),inset 0 1px 0 rgba(255,255,255,.3)}
+  .nav nav a.btn{color:#fff}
+  .btn.ghost{background:rgba(255,255,255,.08);color:var(--ink);border:1.5px solid var(--ink);box-shadow:none;backdrop-filter:blur(4px)}
+  .btn.ghost:hover{background:var(--ink);color:#fff;box-shadow:0 12px 26px rgba(30,22,14,.3)}
+  .nav .btn{padding:.55rem 1.15rem}
   @media(max-width:720px){.nav nav a{display:none}.nav nav a.btn{display:inline-block}}
   /* hero */
   .hero{position:relative;min-height:86vh;display:flex;align-items:flex-end;color:#fff}
@@ -48,8 +53,9 @@
   .hero h1{font-size:clamp(2.6rem,6vw,4.4rem);max-width:13em;margin:.35em 0 .3em}
   .hero p{max-width:34em;font-size:1.06rem;opacity:.95}
   .hero .cta{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
-  .hero .btn.ghost{border-color:#fff;color:#fff}
-  .hero .btn.ghost:hover{background:#fff;color:var(--ink)}
+  .hero .cta .btn{padding:.85rem 1.7rem;font-size:1rem}
+  .hero .btn.ghost{border-color:rgba(255,255,255,.85);color:#fff;box-shadow:none}
+  .hero .btn.ghost:hover{background:#fff;color:var(--ink);box-shadow:0 12px 26px rgba(0,0,0,.3)}
   /* sections */
   section{padding:84px 0}
   .sec-head{max-width:640px;margin-bottom:40px}
@@ -115,7 +121,7 @@
       <a href="#collection">Collection</a>
       <a href="#order">How to Order</a>
       <a href="#about">About</a>
-      <a class="btn" href="https://www.instagram.com/k_ceramic_canada/" target="_blank" rel="noopener">Instagram</a>
+      <a class="btn insta" href="https://www.instagram.com/k_ceramic_canada/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="0.6" fill="currentColor" stroke="none"/></svg>Instagram</a>
     </nav>
   </div>
 </header>
@@ -123,11 +129,11 @@
 <div class="hero">
   <img class="bg" src="assets/own-plates-collection.jpg" alt="A collection of handmade ceramic plates and dishes, each with a unique design">
   <div class="inner">
-    <div class="kicker">Handmade in the Korean tradition · Langley, BC</div>
+    <div class="kicker">Handmade in the Korean tradition · Canada</div>
     <h1>Korean handmade ceramics, curated for Canadian tables.</h1>
     <p>Colour tableware by <strong>motto</strong>, one-of-a-kind art pieces by <strong>Michelle Hong</strong>, and K-Ceramic's own studio pieces — brought together in Langley, British Columbia.</p>
     <div class="cta">
-      <a class="btn" href="#collection">View the collection</a>
+      <a class="btn" href="#collection">View the collection <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
       <a class="btn ghost" href="https://www.instagram.com/k_ceramic_canada/" target="_blank" rel="noopener">DM to order — @k_ceramic_canada</a>
     </div>
   </div>
