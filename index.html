@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>K-Ceramic Canada — Korean Handmade Ceramics in Langley, BC</title>
+<meta name="description" content="Korean handmade ceramics, curated for Canadian tables. Colour tableware by motto and one-of-a-kind art pieces by Michelle Hong, in Langley, BC. DM to order on Instagram.">
+<meta property="og:title" content="K-Ceramic Canada">
+<meta property="og:description" content="Korean handmade ceramics, curated for Canadian tables — Langley, BC.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://k-ceramic.ca/">
+<meta property="og:image" content="https://k-ceramic.ca/assets/own-plates-collection.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏺</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ivory:#faf6ef; --paper:#fffdf8; --ink:#2b2620; --soft:#6f6558;
+    --clay:#b4552d; --clay-dark:#93431f; --sage:#7d8471; --line:#e5dccb;
+    --kale:#44553c; --linen:#ede4d3; --matte:#8a9a7b;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;background:var(--ivory);color:var(--ink);line-height:1.6}
+  h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.15}
+  a{color:inherit}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+  /* header */
+  header{position:sticky;top:0;z-index:20;background:rgba(250,246,239,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:600;letter-spacing:.02em;text-decoration:none}
+  .brand span{color:var(--clay)}
+  .nav nav{display:flex;gap:26px;align-items:center}
+  .nav nav a{text-decoration:none;font-size:.92rem;color:var(--soft)}
+  .nav nav a:hover{color:var(--ink)}
+  .btn{display:inline-block;background:var(--clay);color:#fff;text-decoration:none;padding:.65rem 1.25rem;border-radius:999px;font-size:.92rem;font-weight:500;transition:background .2s}
+  .btn:hover{background:var(--clay-dark)}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+  .btn.ghost:hover{background:var(--ink);color:#fff}
+  .nav .btn{padding:.5rem 1.05rem}
+  @media(max-width:720px){.nav nav a{display:none}.nav nav a.btn{display:inline-block}}
+  /* hero */
+  .hero{position:relative;min-height:86vh;display:flex;align-items:flex-end;color:#fff}
+  .hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,22,14,.08) 40%,rgba(30,22,14,.72))}
+  .hero .inner{position:relative;z-index:2;padding:64px 22px 72px;max-width:1140px;margin:0 auto;width:100%}
+  .hero .kicker{letter-spacing:.22em;text-transform:uppercase;font-size:.78rem;font-weight:600;opacity:.9}
+  .hero h1{font-size:clamp(2.6rem,6vw,4.4rem);max-width:13em;margin:.35em 0 .3em}
+  .hero p{max-width:34em;font-size:1.06rem;opacity:.95}
+  .hero .cta{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+  .hero .btn.ghost{border-color:#fff;color:#fff}
+  .hero .btn.ghost:hover{background:#fff;color:var(--ink)}
+  /* sections */
+  section{padding:84px 0}
+  .sec-head{max-width:640px;margin-bottom:40px}
+  .sec-head .kicker{letter-spacing:.22em;text-transform:uppercase;font-size:.75rem;font-weight:600;color:var(--clay)}
+  .sec-head h2{font-size:clamp(1.9rem,4vw,2.7rem);margin:.25em 0 .35em}
+  .sec-head p{color:var(--soft)}
+  /* makers */
+  .makers{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  @media(max-width:820px){.makers{grid-template-columns:1fr}}
+  .maker{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+  .maker .photo{height:300px;overflow:hidden}
+  .maker .photo img{width:100%;height:100%;object-fit:cover;display:block}
+  .swatches{height:300px;display:grid;grid-template-rows:1fr 1fr 1fr}
+  .swatches div{display:flex;align-items:flex-end;padding:16px 20px;color:#fff;font-family:'Cormorant Garamond',serif;font-size:1.25rem}
+  .swatches .s1{background:var(--kale)}
+  .swatches .s2{background:var(--matte)}
+  .swatches .s3{background:var(--linen);color:var(--ink)}
+  .maker .body{padding:26px 28px 30px}
+  .maker h3{font-size:1.6rem}
+  .maker .handle{color:var(--clay);font-weight:600;font-size:.9rem}
+  .maker p{color:var(--soft);margin-top:8px}
+  .maker a.more{display:inline-block;margin-top:14px;font-weight:600;font-size:.92rem;text-decoration:none;border-bottom:2px solid var(--clay)}
+  /* grid */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.grid{grid-template-columns:1fr}}
+  .piece{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .piece img{width:100%;height:250px;object-fit:cover;display:block}
+  .piece .body{padding:18px 20px 20px}
+  .piece h3{font-size:1.25rem}
+  .piece .maker-line{color:var(--soft);font-size:.88rem;margin-top:2px}
+  .piece a.ask{font-size:.88rem;font-weight:600;color:var(--clay);text-decoration:none}
+  .piece a.ask:hover{text-decoration:underline}
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:820px){.steps{grid-template-columns:1fr}}
+  .step{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:28px}
+  .step .num{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--clay)}
+  .step h3{font-size:1.3rem;margin:6px 0}
+  .step p{color:var(--soft);font-size:.95rem}
+  /* about / insta */
+  .about{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .about .cols{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+  @media(max-width:820px){.about .cols{grid-template-columns:1fr}}
+  .about img{width:100%;height:340px;object-fit:cover;border-radius:16px}
+  .about p{color:var(--soft);margin-top:12px}
+  .insta{text-align:center}
+  .insta h2{font-size:clamp(1.9rem,4vw,2.6rem)}
+  .insta p{color:var(--soft);margin:10px auto 24px;max-width:30em}
+  footer{padding:44px 0 54px;color:var(--soft);font-size:.9rem}
+  footer .row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:26px}
+  footer a{text-decoration:none}
+  footer a:hover{color:var(--ink)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#">K-Ceramic <span>Canada</span></a>
+    <nav>
+      <a href="#makers">Makers</a>
+      <a href="#collection">Collection</a>
+      <a href="#order">How to Order</a>
+      <a href="#about">About</a>
+      <a class="btn" href="https://www.instagram.com/k_ceramic_canada/" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <img class="bg" src="assets/own-plates-collection.jpg" alt="A collection of handmade ceramic plates and dishes, each with a unique design">
+  <div class="inner">
+    <div class="kicker">Handmade in the Korean tradition · Langley, BC</div>
+    <h1>Korean handmade ceramics, curated for Canadian tables.</h1>
+    <p>Colour tableware by <strong>motto</strong>, one-of-a-kind art pieces by <strong>Michelle Hong</strong>, and K-Ceramic's own studio pieces — brought together in Langley, British Columbia.</p>
+    <div class="cta">
+      <a class="btn" href="#collection">View the collection</a>
+      <a class="btn ghost" href="https://www.instagram.com/k_ceramic_canada/" target="_blank" rel="noopener">DM to order — @k_ceramic_canada</a>
+    </div>
+  </div>
+</div>
+
+<section id="makers">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Two lines, one table</div>
+      <h2>The makers</h2>
+      <p>Every piece on this page comes from one of two studios we work with directly — kept distinct, because they make very different things.</p>
+    </div>
+    <div class="makers">
+      <article class="maker">
+        <div class="swatches" aria-label="motto colour palette: Kale Green, Matte Green, Linen Ivory">
+          <div class="s1">Kale Green</div>
+          <div class="s2">Matte Green</div>
+          <div class="s3">Linen Ivory</div>
+        </div>
+        <div class="body">
+          <div class="handle">@motto_casa · Bundang, Korea</div>
+          <h3>motto — Colour Tableware</h3>
+          <p>Everyday plates, cups, trays and platters in curated colours, made to mix. motto calls it a <em>Color Pantry</em> — colours you take out, combine and set a table with, the way you cook with ingredients.</p>
+          <a class="more" href="https://www.instagram.com/motto_casa/" target="_blank" rel="noopener">See motto on Instagram</a>
+        </div>
+      </article>
+      <article class="maker">
+        <div class="photo"><img src="assets/michelle-energy.jpg" alt="Energy — experimental glazed ceramic work by Michelle Hong"></div>
+        <div class="body">
+          <div class="handle">@art_michelle_visualart</div>
+          <h3>Michelle Hong — Art Ceramics</h3>
+          <p>One-of-a-kind ceramic art: moon jars, kintsugi repair as philosophy, and action-glazed experimental pieces. No two are alike, and when one is gone, it is gone.</p>
+          <a class="more" href="https://www.instagram.com/art_michelle_visualart/" target="_blank" rel="noopener">See Michelle on Instagram</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="collection" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Featured pieces</div>
+      <h2>From the collection</h2>
+      <p>A few of the pieces that define K-Ceramic. Availability changes as pieces find homes — ask us on Instagram for what is currently available.</p>
+    </div>
+    <div class="grid">
+      <article class="piece">
+        <img src="assets/own-vases-organic.jpg" alt="Ceramic vases with organic shapes in white, light blue and green glazes">
+        <div class="body"><h3>Organic Form Vases</h3><div class="maker-line">K-Ceramic studio pieces</div><a class="ask" href="https://www.instagram.com/k_ceramic_canada/" target="_blank" rel="noopener">Ask on Instagram →</a></div>
+      </article>
+      <article class="piece">
+        <img src="assets/own-vase-marble-gray.jpg" alt="Handmade mini ceramic vase with a marbled gray and white pattern">
+        <div class="body"><h3>Marbled Mini Vase — Gray</h3><div class="maker-line">K-Ceramic studio pieces</div><a class="ask" href="https://www.instagram.com/k_ceramic_canada/" target="_blank" rel="noopener">Ask on Instagram →</a></div>
+      </article>
+      <article class="piece">
+        <img src="assets/own-vase-green-blue.jpg" alt="A small greenish-blue ceramic vase">
+        <div class="body"><h3>Small Green-Blue Vase</h3><div class="maker-line">K-Ceramic studio pieces</div><a class="ask" href="https://www.instagram.com/k_ceramic_canada/" target="_blank" rel="noopener">Ask on Instagram →</a></div>
+      </article>
+      <article class="piece">
+        <img src="assets/michelle-The-Long-Waiting.png" alt="The Long Waiting — ceramic kintsugi art by Michelle Hong">
+        <div class="body"><h3>The Long Waiting</h3><div class="maker-line">Michelle Hong · Ceramic, kintsugi</div><a class="ask" href="https://www.instagram.com/art_michelle_visualart/" target="_blank" rel="noopener">Ask on Instagram →</a></div>
+      </article>
+      <article class="piece">
+        <img src="assets/michelle-kinstugi.png" alt="Kintsugi works — repaired ceramic art by Michelle Hong">
+        <div class="body"><h3>Kintsugi Works</h3><div class="maker-line">Michelle Hong · Kintsugi</div><a class="ask" href="https://www.instagram.com/art_michelle_visualart/" target="_blank" rel="noopener">Ask on Instagram →</a></div>
+      </article>
+      <article class="piece">
+        <img src="assets/michelle-flow-.png" alt="Flow Experimentation — glaze-flow ceramic pots by Michelle Hong">
+        <div class="body"><h3>Flow Experimentation</h3><div class="maker-line">Michelle Hong · Experimental glaze</div><a class="ask" href="https://www.instagram.com/art_michelle_visualart/" target="_blank" rel="noopener">Ask on Instagram →</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="order" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">How to order</div>
+      <h2>Three simple steps</h2>
+      <p>We sell personally, not through a checkout — every order starts with a conversation.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h3>Find a piece you love</h3><p>Browse the collection here, or see the newest pieces first on Instagram at @k_ceramic_canada.</p></div>
+      <div class="step"><div class="num">2</div><h3>Send us a DM</h3><p>Message @k_ceramic_canada on Instagram with the piece you have in mind. We will confirm it is available and its price.</p></div>
+      <div class="step"><div class="num">3</div><h3>Pickup or shipping</h3><p>Local pickup is in Langley, BC. If you need shipping, we will confirm the cost and payment with you in the same conversation.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="wrap cols">
+    <div>
+      <div class="sec-head" style="margin-bottom:0">
+        <div class="kicker">About</div>
+        <h2>Clay, colour, and patience</h2>
+      </div>
+      <p>K-Ceramic Canada brings Korean handmade ceramics to Canadian homes from Langley, British Columbia. We work with motto, a colour-tableware studio in Bundang, Korea, and with visual artist Michelle Hong, whose ceramic and kintsugi works are exhibited in Korea and Canada.</p>
+      <p>For Michelle's full portfolio — painting, performance art and exhibitions — visit her artist site.</p>
+      <p><a class="more" href="http://michellehongart.com/" target="_blank" rel="noopener" style="font-weight:600;border-bottom:2px solid var(--clay);text-decoration:none">michellehongart.com →</a></p>
+    </div>
+    <img src="assets/own-lighthouse.jpg" alt="Ceramic art lighthouse by K-Ceramic">
+  </div>
+</section>
+
+<section class="insta">
+  <div class="wrap">
+    <h2>New pieces, every week</h2>
+    <p>The newest tableware colours and art pieces appear on Instagram first — including pieces that never make it to this page.</p>
+    <a class="btn" href="https://www.instagram.com/k_ceramic_canada/" target="_blank" rel="noopener">Follow @k_ceramic_canada</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap row">
+    <div>© 2026 K-Ceramic Canada · Langley, BC</div>
+    <div>
+      <a href="https://www.instagram.com/k_ceramic_canada/" target="_blank" rel="noopener">Instagram</a> ·
+      <a href="https://www.instagram.com/motto_casa/" target="_blank" rel="noopener">@motto_casa</a> ·
+      <a href="https://www.instagram.com/art_michelle_visualart/" target="_blank" rel="noopener">@art_michelle_visualart</a> ·
+      <a href="http://michellehongart.com/" target="_blank" rel="noopener">michellehongart.com</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
