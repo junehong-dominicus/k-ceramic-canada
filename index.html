@@ -31,7 +31,8 @@
   header{position:sticky;top:0;z-index:20;background:rgba(250,246,239,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
   .brand{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:600;letter-spacing:.02em;text-decoration:none}
-  .brand span{color:#ea2d37}
+  .brand .can{color:#ea2d37}
+  .brand .hyph{display:inline-block;width:.3em;height:.05em;background:currentColor;vertical-align:middle;margin:0 .05em;position:relative;top:-.1em;border-radius:2px}
   .nav nav{display:flex;gap:26px;align-items:center}
   .nav nav a{text-decoration:none;font-size:.92rem;color:var(--soft)}
   .nav nav a:hover{color:var(--ink)}
@@ -117,7 +118,7 @@
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#">K-Ceramic <span>Canada</span></a>
+    <a class="brand" href="#">K<span class="hyph"></span>Ceramic <span class="can">Canada</span></a>
     <nav>
       <a href="#makers">Makers</a>
       <a href="#collection">Collection</a>
